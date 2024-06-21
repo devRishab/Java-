@@ -1,0 +1,29 @@
+
+interface Foo{
+    public String Hello(String a);
+}
+
+class Abc {
+    Abc(Foo foo , String message){
+       System.out.println(foo.Hello(message));
+    }  
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        // an anonymous class - class that does not have name 
+        // a class that implements one interface or extends a class
+        Foo f = new Foo(){
+            
+            public String Hello(String a ){
+                return a;
+            }
+            
+        };
+        
+        Abc abc = new Abc(f,"rishab");
+    }
+    
+    
+}
